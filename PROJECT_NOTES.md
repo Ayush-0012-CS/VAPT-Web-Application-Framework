@@ -22,9 +22,11 @@ Python, Flask, Requests, HTML, CSS
 Use the following credentials for the academic demonstration:
 
 **Username: admin
+
 **Password: admin123
 
-These credentials are for the local academic demo only. Do not use them in a production environment.
+These credentials are for the local academic demo only.
+Do not use them in a production environment.
 ## Suggested demo flow
 1. Run `python demo_target.py`
 2. In another terminal run `python app.py`
