@@ -16,11 +16,14 @@ Python, Flask, Requests, HTML, CSS
 4. Cookie Security Checks
 5. Reflected Input Marker Check
 6. Severity & Risk Scoring
-7. Dashboard Reporting
+7. Dashboard Reporting.
+
  ##Demo Login Credentials
 Use the following credentials for the academic demonstration:
+
 **Username: admin
 **Password: admin123
+
 These credentials are for the local academic demo only. Do not use them in a production environment.
 ## Suggested demo flow
 1. Run `python demo_target.py`
