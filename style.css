@@ -1,0 +1,12 @@
+*{box-sizing:border-box}body{margin:0;background:#0b1220;color:#e7eef8;font-family:Arial,sans-serif}
+header{padding:22px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #243147}
+.brand{font-weight:800;letter-spacing:1.4px;font-size:20px}.sub{color:#94a3b8;margin-top:5px;font-size:13px}.badge{border:1px solid #3b82f6;border-radius:20px;padding:7px 12px;color:#93c5fd;font-size:11px}
+main{max-width:1050px;margin:34px auto;padding:0 20px}.hero{background:#111c2e;border:1px solid #263650;border-radius:18px;padding:28px}
+h1{margin:0 0 8px;font-size:30px}.hero p{color:#9fb0c7}.hero form{display:flex;gap:10px;margin-top:22px}
+input{flex:1;background:#09111e;color:#fff;border:1px solid #33445f;border-radius:10px;padding:14px;font-size:15px}
+button{background:#2563eb;color:#fff;border:0;border-radius:10px;padding:0 20px;font-weight:700;cursor:pointer}small{display:block;color:#71829b;margin-top:10px}
+.alert{margin-top:16px;background:#3a1720;border:1px solid #7f1d1d;padding:12px;border-radius:10px;color:#fecaca}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.card{background:#111c2e;border:1px solid #263650;border-radius:14px;padding:18px}.card span{display:block;color:#8293aa;font-size:11px;letter-spacing:1px}.card strong{display:block;margin-top:8px;font-size:22px}.score strong{color:#60a5fa}
+.results{margin-top:20px}.results h2{font-size:20px}.finding{background:#111c2e;border:1px solid #263650;border-radius:14px;padding:18px;margin:10px 0}.row{display:flex;justify-content:space-between;align-items:center}.row h3{margin:0;font-size:16px}.finding p{color:#aebbd0;font-size:13px;line-height:1.5}.severity{padding:5px 9px;border-radius:12px;font-size:11px;font-weight:700;background:#334155}.severity.high{background:#7f1d1d}.severity.medium{background:#854d0e}.severity.low{background:#14532d}.safe{padding:18px;background:#123322;border:1px solid #166534;border-radius:12px;color:#bbf7d0}
+footer{text-align:center;color:#60718a;padding:35px;font-size:12px}
+@media(max-width:750px){.summary{grid-template-columns:1fr 1fr}.hero form{flex-direction:column}button{padding:14px}.row{gap:10px}}

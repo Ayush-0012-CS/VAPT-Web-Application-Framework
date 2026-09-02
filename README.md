@@ -1,60 +1,56 @@
-# VAPT-Web-Application-Framework
-A Python-based VAPT framework for assessing web application security, detecting common vulnerabilities, and generating security risk insights.
-# Demo Login
-*Username:admin  
-*Password:admin123 
+# VAPT Web Application Framework
 
-# How to Run
+A compact academic Vulnerability Assessment and Penetration Testing (VAPT) framework built with Python and Flask.
 
-1. Install Python.
-2. Install dependencies:
-   `pip install -r requirements.txt`
-3. Run:
-   `python app.py`
-4. Open `http://127.0.0.1:5000`
+## What it demonstrates
+- Professional VAPT dashboard
+- Local web-application target validation
+- HTTP security-header assessment
+- Server-banner disclosure check
+- Cookie security flag checks
+- Harmless reflected-input marker check
+- Severity classification and risk score
+- Evidence + remediation recommendations
 
-# Project Motto
+## Safety
+This demo intentionally accepts **only localhost targets**:
+- `http://127.0.0.1:5001`
+- `http://localhost:5001`
+- `http://[::1]:5001`
 
-> Identify Vulnerabilities. Assess Risks. Strengthen Security.
+It does not perform exploitation, credential attacks, brute force, destructive testing, or scanning of third-party systems.
 
-# How It Works
+## Windows 11 setup
 
-1. Login – User logs into the VAPT Lab using the demo credentials.
-2. Enter Target – User enters the web application URL to be assessed.
-3. URL Validation – The framework validates the target URL.
-4. Security Scan – It sends an HTTP request and checks the application's response.
-5. Header Analysis – Important security headers are checked for missing configurations.
-6. Risk Assessment – A threat score is calculated based on the missing security headers.
-7. Results – The dashboard displays the HTTP status, HTTPS status, server information, security-header status, risk level, and alerts.
+1. Install Python 3.11+.
+2. Open this project folder in VS Code.
+3. Open Terminal.
+4. Create a virtual environment:
 
-# Workflow
+```powershell
+python -m venv venv
+.\venv\Scripts\activate
+```
 
-Login → Enter Target URL → Validate Target → Scan → Analyze Security Headers → Calculate Risk → Display Results.
+5. Install dependencies:
 
-#Technologies Used
+```powershell
+pip install -r requirements.txt
+```
 
-- Python
-- Flask
-- HTML5
-- CSS3
-- Requests Library
+6. Start the dashboard:
 
-# Security Checks
+```powershell
+python app.py
+```
 
-The framework currently performs:
+7. Open:
+`http://127.0.0.1:5000`
 
-- HTTP response status check
-- HTTPS availability check
-- Server header inspection
-- Security header analysis
-- Missing security header detection
-- Risk score calculation
-- Security alerts generation
+## Demo target
 
-# Project Scope
+For a visible demo, run a second local Flask application on port 5001, then scan:
 
-This project is developed for academic and educational purposes. 
-It demonstrates basic VAPT concepts and security-header assessment 
-in a controlled local testing environment.
+`http://127.0.0.1:5001`
 
-Only systems for which you have explicit permission should be tested.
+The scanner is designed as an academic framework rather than a replacement for professional penetration-testing tools.

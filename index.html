@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VAPT Security Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <div>
+    <div class="brand">VAPT SECURITY DASHBOARD</div>
+    <div class="sub">Web Application Vulnerability Assessment Framework</div>
+  </div>
+  <div class="badge">ACADEMIC DEMO</div>
+</header>
+
+<main>
+<section class="hero">
+  <h1>Local Web Application Security Scanner</h1>
+  <p>Run a focused, non-destructive security assessment against a local web application.</p>
+  <form method="post">
+    <input name="target" value="{{ target }}" placeholder="http://127.0.0.1:5001" required>
+    <button type="submit">Start VAPT Scan</button>
+  </form>
+  <small>Safety scope: localhost / 127.0.0.1 / ::1 only.</small>
+</section>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% for category, message in messages %}
+  <div class="alert">{{ message }}</div>
+  {% endfor %}
+{% endwith %}
+
+{% if results %}
+<section class="summary">
+  <div class="card score">
+    <span>RISK SCORE</span>
+    <strong>{{ results.score }}/100</strong>
+  </div>
+  <div class="card">
+    <span>HTTP STATUS</span>
+    <strong>{{ results.status or "—" }}</strong>
+  </div>
+  <div class="card">
+    <span>FINDINGS</span>
+    <strong>{{ results.findings|length }}</strong>
+  </div>
+  <div class="card">
+    <span>SCANNED</span>
+    <strong>{{ results.scanned_at }}</strong>
+  </div>
+</section>
+
+<section class="results">
+<h2>Security Findings</h2>
+{% if results.findings %}
+  {% for f in results.findings %}
+  <article class="finding">
+    <div class="row">
+      <h3>{{ f.name }}</h3>
+      <span class="severity {{ f.severity|lower }}">{{ f.severity }}</span>
+    </div>
+    <p><b>Evidence:</b> {{ f.evidence }}</p>
+    <p><b>Recommendation:</b> {{ f.recommendation }}</p>
+  </article>
+  {% endfor %}
+{% else %}
+  <div class="safe">No findings were detected by the configured checks.</div>
+{% endif %}
+</section>
+{% endif %}
+</main>
+<footer>VAPT Framework • Built with Python + Flask • Non-destructive local assessment</footer>
+</body>
+</html>
