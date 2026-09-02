@@ -32,8 +32,10 @@ Do not use them in a production environment.
 2. In another terminal run `python app.py`
 3. Open `http://127.0.0.1:5000`
 4. Enter `http://127.0.0.1:5001`
-5. Click Start VAPT Scan
-6. Explain findings and remediation recommendations.
+5. open. https://vapt-web-application-framework-1.onrender.com
+6. enter. https://vapt-web-application-framework-1.onrender.com
+7. Click Start VAPT Scan
+8. Explain findings and remediation recommendations.
 
 ## Viva points
 - VAPT means Vulnerability Assessment and Penetration Testing.
